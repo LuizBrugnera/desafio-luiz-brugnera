@@ -1,26 +1,24 @@
 class CaixaDaLanchonete {
-  _produtos = {
-    cafe: 3.0,
-    chantily: 1.5,
-    suco: 6.2,
-    sanduiche: 6.5,
-    queijo: 2.0,
-    salgado: 7.25,
-    combo1: 9.5,
-    combo2: 7.5,
-  };
+  constructor() {
+    this._produtos = {
+      cafe: 3.0,
+      chantily: 1.5,
+      suco: 6.2,
+      sanduiche: 6.5,
+      queijo: 2.0,
+      salgado: 7.25,
+      combo1: 9.5,
+      combo2: 7.5,
+    };
 
-  _pagamento = {
-    dinheiro: -0.05,
-    credito: 0.03,
-    debito: 0,
-  };
+    this._pagamento = {
+      dinheiro: -0.05,
+      credito: 0.03,
+      debito: 0,
+    };
 
-  _chantily = 0;
-  _queijo = 0;
-  _sanduiche = 0;
-  _cafe = 0;
-  _erro = "";
+    this._reset();
+  }
 
   _validaProdutos(produto, quantidade) {
     if (quantidade <= 0) {
